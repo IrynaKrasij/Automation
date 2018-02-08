@@ -1,0 +1,217 @@
+TC1: Verify selling USD by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select USD currency from currency drop down list
+5. Put a sum of USD in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr USD buying rate
+EUR = sum * avr USD buying rate / avr EUR selling rate
+RUB = sum * avr USD buying rate / avr RUB selling rate
+//=============================================================
+
+TC1: Verify selling USD by OTPBank rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select USD currency from currency drop down list
+5. Put a sum of USD in a Sum field
+6. Select OTPBank rate from rates drop down list
+7. Verify results:
+UAH = sum * avr USD buying rate
+EUR = sum * avr USD buying rate / avr EUR selling rate
+RUB = sum * avr USD buying rate / avr RUB selling rate
+//=============================================================
+
+TC2: Verify selling UAH by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select UAH currency from currency drop down list
+5. Put a sum of UAH in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+USD = sum / avr USD selling rate
+EUR = sum / avr EUR selling rate
+RUB = sum / avr RUB selling rate
+//=============================================================
+
+TC2: Verify selling UAH by Приватбанк rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select UAH currency from currency drop down list
+5. Put a sum of UAH in a Sum field
+6. Select Приватбанк rate from rates drop down list
+7. Verify results:
+USD = sum / avr USD selling rate
+EUR = sum / avr EUR selling rate
+RUB = sum / avr RUB selling rate
+//=============================================================
+
+TC4: Verify selling EUR by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select EUR currency from currency drop down list
+5. Put a sum of EUR in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr EUR buying rate
+USD = sum * avr EUR buying rate / avr USD selling rate
+RUB = sum * avr EUR buying rate / avr RUB selling rate
+//=============================================================
+
+TC4: Verify selling EUR by Приватбанк rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select EUR currency from currency drop down list
+5. Put a sum of EUR in a Sum field
+6. Select Приватбанк rate from rates drop down list
+7. Verify results:
+UAH = sum * avr EUR buying rate
+USD = sum * avr EUR buying rate / avr USD selling rate
+RUB = sum * avr EUR buying rate / avr RUB selling rate
+//=============================================================
+
+TC3: Verify selling RUB by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select RUB currency from currency drop down list
+5. Put a sum of RUB in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr RUB buying rate
+USD = sum * avr RUB buying rate / avr USD selling rate
+EUR = sum * avr RUB buying rate / avr EUR selling rate
+//=============================================================
+
+TC3: Verify selling RUB by OTPBank rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select RUB currency from currency drop down list
+5. Put a sum of RUB in a Sum field
+6. Select OTPBank rate from rates drop down list
+7. Verify results:
+UAH = sum * avr RUB buying rate
+USD = sum * avr RUB buying rate / avr USD selling rate
+EUR = sum * avr RUB buying rate / avr EUR selling rate
+//=============================================================
+
+TC1: Verify buying USD by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select USD currency from currency drop down list
+5. Put a sum of USD in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr USD selling rate
+EUR = sum * avr USD selling rate / avr EUR buying rate
+RUB = sum * avr USD selling rate / avr RUB buying rate
+//=============================================================
+
+TC1: Verify buying USD by OTPBank rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select USD currency from currency drop down list
+5. Put a sum of USD in a Sum field
+6. Select OTPBank rate from rates drop down list
+7. Verify results:
+UAH = sum * avr USD selling rate
+EUR = sum * avr USD selling rate / avr EUR buying rate
+RUB = sum * avr USD selling rate / avr RUB buying rate
+//=============================================================
+
+TC2: Verify buying UAH by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select UAH currency from currency drop down list
+5. Put a sum of UAH in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+USD = sum / avr USD buying rate
+EUR = sum / avr EUR buying rate
+RUB = sum / avr RUB buying rate
+//=============================================================
+
+TC2: Verify buying UAH by Приватбанк rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select UAH currency from currency drop down list
+5. Put a sum of UAH in a Sum field
+6. Select Приватбанк rate from rates drop down list
+7. Verify results:
+USD = sum / avr USD buying rate
+EUR = sum / avr EUR buying rate
+RUB = sum / avr RUB buying rate
+//=============================================================
+
+TC4: Verify buying EUR by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select EUR currency from currency drop down list
+5. Put a sum of EUR in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr EUR selling rate
+USD = sum * avr EUR selling rate / avr USD buying rate
+RUB = sum * avr EUR selling rate / avr RUB buying rate
+//=============================================================
+
+TC4: Verify buying EUR by Приватбанк rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select buy option
+4. Select EUR currency from currency drop down list
+5. Put a sum of EUR in a Sum field
+6. Select Приватбанк rate from rates drop down list
+7. Verify results:
+UAH = sum * avr EUR selling rate
+USD = sum * avr EUR selling rate / avr USD buying rate
+RUB = sum * avr EUR selling rate / avr RUB buying rate
+//=============================================================
+
+TC3: Verify buying RUB by average rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select RUB currency from currency drop down list
+5. Put a sum of RUB in a Sum field
+6. Select average rate from rates drop down list
+7. Verify results:
+UAH = sum * avr RUB selling rate
+USD = sum * avr RUB selling rate / avr USD buying rate
+EUR = sum * avr RUB selling rate / avr EUR buying rate
+//=============================================================
+
+TC3: Verify buying RUB by OTPBank rate
+1. Open https://finance.i.ua/ page
+2. Go to Currency converter page
+3. Select sell option
+4. Select RUB currency from currency drop down list
+5. Put a sum of RUB in a Sum field
+6. Select OTPBank rate from rates drop down list
+7. Verify results:
+UAH = sum * avr RUB selling rate
+USD = sum * avr RUB selling rate / avr USD buying rate
+EUR = sum * avr RUB selling rate / avr EUR buying rate
+//=============================================================
+
+
+
+
+
+
+
+
+
+
