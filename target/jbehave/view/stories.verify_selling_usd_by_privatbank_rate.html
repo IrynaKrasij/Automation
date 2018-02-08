@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>stories.verify_selling_usd_by_privatbank_rate</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories/verify_selling_usd_by_privatbank_rate.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> user</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform an action</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can achieve a business goal</div>
+</div>
+<div class="scenario">
+<h2>Scenario: VSUBAR-1 Verify selling USD by privatbank rate</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given User opens currency converter page</div>
+<div class="step">When User clicks on sell option link</div>
+<div class="step">And User selects &lt;currencyName&gt; currency from dropdown list</div>
+<div class="step">And User puts &lt;currencyAmount&gt; value of currency amount in sum field</div>
+<div class="step">And User selects &lt;rateValue&gt; rate value from dropdown list</div>
+<div class="step">Then User checks results for the list of currency &lt;currencyList&gt;</div>
+<table>
+<thead>
+<tr>
+<th>currencyName</th><th>currencyAmount</th><th>rateValue</th><th>currencyList</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>USD</td><td>300.00</td><td>&#1055;&#1088;&#1080;&#1074;&#1072;&#1090;&#1041;&#1072;&#1085;&#1082;</td><td>UAH,EUR,RUB</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {currencyName=USD, currencyAmount=300.00, rateValue=&#1055;&#1088;&#1080;&#1074;&#1072;&#1090;&#1041;&#1072;&#1085;&#1082;, currencyList=UAH,EUR,RUB}</h3>
+<div class="step successful">Given User opens currency converter page</div>
+<div class="step successful">When User clicks on sell option link</div>
+<div class="step successful">And User selects <span class="step parameter">USD</span> currency from dropdown list</div>
+<div class="step successful">And User puts <span class="step parameter">300.00</span> value of currency amount in sum field</div>
+<div class="step successful">And User selects <span class="step parameter">&#1055;&#1088;&#1080;&#1074;&#1072;&#1090;&#1041;&#1072;&#1085;&#1082;</span> rate value from dropdown list</div>
+<div class="step successful">Then User checks results for the list of currency <span class="step parameter">UAH,EUR,RUB</span></div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,22 @@
+{"xref": {
+  "whenMade": 1518125424149,
+  "createdBy": "JBehave",
+  "metaFilter": "-ignore",
+  "meta": [],
+  "stories": [
+    {
+      "description": "",
+      "narrative": "In order to \nAs a user\nI want to perform an action\n",
+      "name": "verify_selling_usd_by_privatbank_rate.story",
+      "path": "stories/verify_selling_usd_by_privatbank_rate.story",
+      "html": "stories.verify_selling_usd_by_privatbank_rate.html",
+      "meta": "",
+      "scenarios": "Scenario:VSUBAR-1 Verify selling USD by privatbank rate\nGiven User opens currency converter page\nWhen User clicks on sell option link\nAnd User selects <currencyName> currency from dropdown list\nAnd User puts <currencyAmount> value of currency amount in sum field\nAnd User selects <rateValue> rate value from dropdown list\nThen User checks results for the list of currency <currencyList>\n\n\n",
+      "passed": true,
+      "pending": false,
+      "started": 1518125400902,
+      "duration": 20808
+    }
+  ],
+  "stepMatches": []
+}}

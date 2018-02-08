@@ -1,0 +1,60 @@
+<acceptance-test-run title="VSUBAR-1 Verify selling USD by average rate" name="VSUBAR-1 Verify selling USD by average rate" steps="6" successful="6" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="21355" timestamp="2018-02-08T00:52:07.253+02:00">
+  <user-story id="verify_selling_usd_by_average_rate" name="Verify selling usd by average rate" path="stories/verify_selling_usd_by_average_rate.story"/>
+  <issues>
+    <issue>VSUBAR-1</issue>
+  </issues>
+  <tags>
+    <tag name="Verify selling usd by average rate" type="story"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0"/>
+    </datasets>
+    <headers>
+      <header>currencyName</header>
+      <header>currencyAmount</header>
+      <header>rateValue</header>
+      <header>currencyList</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>USD</value>
+        <value>300.00</value>
+        <value>ПриватБанк</value>
+        <value>UAH,EUR,RUB</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {currencyName=USD, currencyAmount=300.00, rateValue=ПриватБанк, currencyList=UAH,EUR,RUB}" result="SUCCESS">
+    <test-group name="Given User opens currency converter page" result="SUCCESS">
+      <test-step result="SUCCESS" duration="8008">
+        <description>User opens converter page</description>
+      </test-step>
+    </test-group>
+    <test-group name="When User clicks on sell option link" result="SUCCESS">
+      <test-step result="SUCCESS" duration="132">
+        <description>User selects sell option</description>
+      </test-step>
+    </test-group>
+    <test-group name="And User selects {USD} currency from dropdown list" result="SUCCESS">
+      <test-step result="SUCCESS" duration="118">
+        <description>User selects currency from dropdown list: &lt;span class=&apos;step-parameter&apos;&gt;USD&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="And User puts {300.00} value of currency amount in sum field" result="SUCCESS">
+      <test-step result="SUCCESS" duration="211">
+        <description>User puts currency amount in sum field: &lt;span class=&apos;step-parameter&apos;&gt;300.0&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="And User selects {ПриватБанк} rate value from dropdown list" result="SUCCESS">
+      <test-step result="SUCCESS" duration="152">
+        <description>User selects rate value from dropdown list: &lt;span class=&apos;step-parameter&apos;&gt;ПриватБанк&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+    <test-group name="Then User checks results for the list of currency {UAH,EUR,RUB}" result="SUCCESS">
+      <test-step result="SUCCESS" duration="458">
+        <description>User checks result for currency list: &lt;span class=&apos;step-parameter&apos;&gt;[UAH, EUR, RUB]&lt;/span&gt;</description>
+      </test-step>
+    </test-group>
+  </test-group>
+</acceptance-test-run>
