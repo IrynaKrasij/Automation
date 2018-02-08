@@ -1,6 +1,0 @@
-StepsDefinition\RunTest.class
-PageObjects\CurrencyConverterPage.class
-PageObjects\MainFinancePage.class
-Steps\CurrencyConverterSteps$1.class
-StepsDefinition\CurrencyConverterDefinitionSteps.class
-Steps\CurrencyConverterSteps.class
