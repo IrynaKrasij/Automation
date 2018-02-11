@@ -17,3 +17,4 @@ Examples:
 |currencyName|currencyAmount|rateValue|currencyList|
 |USD|300.00|ПриватБанк|UAH,EUR,RUB|
 |USD|400.00|ПриватБанк|UAH,EUR,RUB|
+|USD|150.00|ПриватБанк|UAH,EUR,RUB|
