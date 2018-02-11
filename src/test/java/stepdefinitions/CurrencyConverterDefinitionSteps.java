@@ -1,11 +1,11 @@
-package StepsDefinition;
+package stepdefinitions;
 
-import Steps.CurrencyConverterSteps;
 import enums.Currency;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import steps.CurrencyConverterSteps;
 
 import java.util.List;
 

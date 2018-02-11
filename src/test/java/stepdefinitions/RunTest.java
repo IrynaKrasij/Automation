@@ -1,13 +1,6 @@
-package StepsDefinition;
+package stepdefinitions;
 
 import net.serenitybdd.jbehave.SerenityStories;
-import org.jbehave.core.io.CodeLocations;
-import org.jbehave.core.io.StoryFinder;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Administrator on 11/13/2015.

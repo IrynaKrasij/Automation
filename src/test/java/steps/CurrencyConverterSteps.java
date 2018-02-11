@@ -1,7 +1,7 @@
-package Steps;
+package steps;
 
-import PageObjects.CurrencyConverterPage;
-import PageObjects.MainFinancePage;
+import pageobjects.CurrencyConverterPage;
+import pageobjects.MainFinancePage;
 import enums.Currency;
 import enums.Key;
 import net.thucydides.core.annotations.Step;
@@ -14,7 +14,7 @@ import java.util.List;
 public class CurrencyConverterSteps{
 
     MainFinancePage mainFinancePage;
-    CurrencyConverterPage currencyConverterPage;
+    private CurrencyConverterPage currencyConverterPage;
 
     @Step
     public void userOpensConverterPage() {
@@ -67,11 +67,11 @@ public class CurrencyConverterSteps{
                     actualValue = currencyConverterPage.getEurValueFieldText();
                     break;
                 case USD:
-                    expectedValue = initialCurrencyAmount * uahRateValue;;
+                    expectedValue = initialCurrencyAmount * uahRateValue;
                     actualValue = currencyConverterPage.getUsdValueFieldText();
                     break;
                 case RUB:
-                    expectedValue = initialCurrencyAmount * uahRateValue / rubRateValue;;
+                    expectedValue = initialCurrencyAmount * uahRateValue / rubRateValue;
                     actualValue = currencyConverterPage.getRubValueFieldText();
                     break;
                 default:

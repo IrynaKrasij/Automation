@@ -1,78 +1,73 @@
-package PageObjects;
+package pageobjects;
 
 import enums.Key;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import utils.Session;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 @DefaultUrl("https://finance.i.ua/converter/")
 public class CurrencyConverterPage extends PageObject {
 
     @FindBy(xpath = "//li[@id='sell']/a")
-    WebElementFacade sellLink;
+    private WebElementFacade sellLink;
 
     @FindBy(xpath = "//li[@id='buy']/a")
-    WebElementFacade buyLink;
+    private WebElementFacade buyLink;
 
     @FindBy(xpath = "//select[@id='converter_currency']")
-    WebElementFacade currencyDropdown;
+    private WebElementFacade currencyDropdown;
 
     @FindBy(xpath = "//input[@id='currency_amount']")
-    WebElementFacade currencyAmountField;
+    private WebElementFacade currencyAmountField;
 
     @FindBy(xpath = "//select[@id='converter_bank']")
-    WebElementFacade rateDropdown;
+    private WebElementFacade rateDropdown;
 
     @FindBy(xpath = "//p[@id='UAH']/input[@id='currency_exchange']")
-    WebElementFacade uahValueField;
+    private WebElementFacade uahValueField;
 
     @FindBy(xpath = "//p[@id='USD']/input[@id='currency_exchange']")
-    WebElementFacade usdValueField;
+    private WebElementFacade usdValueField;
 
     @FindBy(xpath = "//p[@id='EUR']/input[@id='currency_exchange']")
-    WebElementFacade eurValueField;
+    private WebElementFacade eurValueField;
 
     @FindBy(xpath = "//p[@id='RUB']/input[@id='currency_exchange']")
-    WebElementFacade rubValueField;
+    private WebElementFacade rubValueField;
 
     @FindBy(xpath="//p[@id='UAH']/input[@id='currency_rate']")
-    WebElementFacade uahRateField;
+    private WebElementFacade uahRateField;
 
     @FindBy(xpath="//p[@id='EUR']/input[@id='currency_rate']")
-    WebElementFacade eurRateField;
+    private WebElementFacade eurRateField;
 
     @FindBy(xpath="//p[@id='USD']/input[@id='currency_rate']")
-    WebElementFacade usdRateField;
+    private WebElementFacade usdRateField;
 
     @FindBy(xpath="//p[@id='RUB']/input[@id='currency_rate']")
-    WebElementFacade rubRateField;
+    private WebElementFacade rubRateField;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='USD']]/td[1]/span/span[1]")
-    WebElementFacade usdBuyingRateLabel;
+    private WebElementFacade usdBuyingRateLabel;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='USD']]/td[2]/span/span[1]")
-    WebElementFacade usdSellingRateLabel;
+    private WebElementFacade usdSellingRateLabel;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='EUR']]/td[1]/span/span[1]")
-    WebElementFacade eurBuyingRateLabel;
+    private WebElementFacade eurBuyingRateLabel;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='EUR']]/td[2]/span/span[1]")
-    WebElementFacade eurSellingRateLabel;
+    private WebElementFacade eurSellingRateLabel;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='RUB']]/td[1]/span/span[1]")
-    WebElementFacade rubBuyingRateLabel;
+    private WebElementFacade rubBuyingRateLabel;
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='RUB']]/td[2]/span/span[1]")
-    WebElementFacade rubSellingRateLabel;
+    private WebElementFacade rubSellingRateLabel;
 
     public void clickSellLink() {
         sellLink.click();
