@@ -53,8 +53,6 @@ public class CurrencyConverterSteps{
         for (Currency currency : currencyList) {
             Double expectedValue;
             Double uahRateValue = Double.valueOf(currencyConverterPage.getUahRateFieldText());
-            Double eurRateValue = Double.valueOf(currencyConverterPage.getEurRateFieldText());
-            Double rubRateValue = Double.valueOf(currencyConverterPage.getRubRateFieldText());
             String actualValue;
             Double initialCurrencyAmount = (Double) Session.get(Key.CURRENCY_AMOUNT);
             switch (currency) {
@@ -63,14 +61,17 @@ public class CurrencyConverterSteps{
                     actualValue = currencyConverterPage.getUahValueFieldText();
                     break;
                 case EUR:
+                    Double eurRateValue = Double.valueOf(currencyConverterPage.getEurRateFieldText());
                     expectedValue = initialCurrencyAmount * uahRateValue / eurRateValue;
                     actualValue = currencyConverterPage.getEurValueFieldText();
                     break;
                 case USD:
-                    expectedValue = initialCurrencyAmount * uahRateValue;
+                    Double usdRateValue = Double.valueOf(currencyConverterPage.getUsdRateFieldText());
+                    expectedValue = initialCurrencyAmount * uahRateValue / usdRateValue;
                     actualValue = currencyConverterPage.getUsdValueFieldText();
                     break;
                 case RUB:
+                    Double rubRateValue = Double.valueOf(currencyConverterPage.getRubRateFieldText());
                     expectedValue = initialCurrencyAmount * uahRateValue / rubRateValue;
                     actualValue = currencyConverterPage.getRubValueFieldText();
                     break;

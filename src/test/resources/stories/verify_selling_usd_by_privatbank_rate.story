@@ -16,5 +16,6 @@ Then User checks results for the list of currency <currencyList>
 Examples:
 |currencyName|currencyAmount|rateValue|currencyList|
 |USD|300.00|ПриватБанк|UAH,EUR,RUB|
-|USD|400.00|ПриватБанк|UAH,EUR,RUB|
-|USD|150.00|ПриватБанк|UAH,EUR,RUB|
+|USD|400.00|Средний курс|UAH,EUR,RUB|
+|EUR|150.00|ПриватБанк|UAH,USD,RUB|
+|EUR|300.00|Средний курс|UAH,USD,RUB|
