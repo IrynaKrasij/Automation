@@ -5,7 +5,7 @@ As a user
 I want to perform an action
 So that I can achieve a business goal
 
-Scenario: VSUBAR-1 Verify selling USD by privatbank rate
+Scenario: VSUBAR-1 Verify selling currencies
 Given User opens currency converter page
 When User clicks on sell option link
 And User selects <currencyName> currency from dropdown list
@@ -19,3 +19,7 @@ Examples:
 |USD|400.00|Средний курс|UAH,EUR,RUB|
 |EUR|150.00|ПриватБанк|UAH,USD,RUB|
 |EUR|300.00|Средний курс|UAH,USD,RUB|
+|RUB|150.00|Средний курс|UAH,USD,EUR|
+|RUB|250.00|ПриватБанк|UAH,USD,EUR|
+|UAH|300.00|ПриватБанк|USD,EUR,RUB|
+|UAH|300.00|Средний курс|USD,EUR,RUB|

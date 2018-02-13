@@ -34,6 +34,7 @@ public class CurrencyConverterSteps{
     @Step
     public void user_selects_currency_from_dropdown_list(final Currency currency) {
         currencyConverterPage.selectCurrencyDropdownValue(currency.toString());
+        Session.put(Key.CURRENCY_NAME, currency);
     }
 
     @Step
@@ -51,8 +52,14 @@ public class CurrencyConverterSteps{
         SoftAssertions softAssertions = new SoftAssertions();
         DecimalFormat df = new DecimalFormat("0.00");
         for (Currency currency : currencyList) {
-            Double expectedValue;
-            Double uahRateValue = Double.valueOf(currencyConverterPage.getUahRateFieldText());
+            Double expectedValue = 0.0;
+            Double uahRateValue  = 0.0;
+            if (Currency.UAH.equals(Session.get(Key.CURRENCY_NAME))) {
+                uahRateValue = 1.0;
+            }
+            else {
+                uahRateValue = Double.valueOf(currencyConverterPage.getUahRateFieldText());
+            }
             String actualValue;
             Double initialCurrencyAmount = (Double) Session.get(Key.CURRENCY_AMOUNT);
             switch (currency) {
