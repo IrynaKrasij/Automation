@@ -1,7 +1,6 @@
 package steps;
 
 import pageobjects.CurrencyConverterPage;
-import pageobjects.MainFinancePage;
 import enums.Currency;
 import enums.Key;
 import net.thucydides.core.annotations.Step;
@@ -13,7 +12,6 @@ import java.util.List;
 
 public class CurrencyConverterSteps{
 
-    MainFinancePage mainFinancePage;
     private CurrencyConverterPage currencyConverterPage;
 
     @Step

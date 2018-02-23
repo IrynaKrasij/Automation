@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 import utils.Session;
 
 
-@DefaultUrl("https://finance.i.ua/converter/")
+@DefaultUrl("/converter/")
+
 public class CurrencyConverterPage extends PageObject {
 
     @FindBy(xpath = "//li[@id='sell']/a")
