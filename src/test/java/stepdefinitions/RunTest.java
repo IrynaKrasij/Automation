@@ -10,8 +10,6 @@ import utils.LocalProperties;
  */
 public class RunTest extends SerenityStories {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SerenityStories.class.getSimpleName());
-
     public RunTest(){
         LocalProperties.propertiesFromFile();
         findStoriesCalled(System.getProperty("story"));
