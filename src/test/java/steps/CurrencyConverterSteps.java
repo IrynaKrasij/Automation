@@ -5,12 +5,15 @@ import org.slf4j.LoggerFactory;
 import pageobjects.CurrencyConverterPage;
 import enums.Currency;
 import enums.Key;
+import enums.Control;
 import net.thucydides.core.annotations.Step;
 import org.assertj.core.api.SoftAssertions;
 import utils.Session;
-
 import java.text.DecimalFormat;
 import java.util.List;
+import java.util.NoSuchElementException;
+
+
 
 public class CurrencyConverterSteps{
 
@@ -100,4 +103,24 @@ public class CurrencyConverterSteps{
         }
         softAssertions.assertAll();
     }
-}
+
+    public void user_verifies_visibility_of_controls_on_the_page(final List<Control> listOfControlsName, final boolean isVisible) {
+        SoftAssertions softAssertions = new SoftAssertions();
+        for (Control controlName : listOfControlsName) {
+            switch (controlName) {
+                case AVERAGECURRENCIESRATEINBANK:
+                    softAssertions.assertThat(currencyConverterPage.isAverageCurrenciesRateInBankVisible(isVisible)).as("'averageCurrenciesRateInBank' element is not visible").isEqualTo(isVisible);
+                    break;
+                case CASHMARKET:
+                    softAssertions.assertThat(currencyConverterPage.isCashMarketVisible(isVisible)).as("'cashMarket' element is not visible").isEqualTo(isVisible);
+                    break;
+                case GRAPHOFFLUCTUATIONSOFMIDDLERATE:
+                    softAssertions.assertThat(currencyConverterPage.isGraphOfFluctuationsOfMiddleRateVisible(isVisible)).as("'graphOfFluctuationsOfMiddleRate' element is not visible").isEqualTo(isVisible);
+                    break;
+                default:
+                    throw new NoSuchElementException("No such element on the page: " + controlName);
+            }
+        }
+    }
+ }
+

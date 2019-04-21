@@ -1,6 +1,8 @@
 package stepdefinitions;
 
+import enums.Control;
 import enums.Currency;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
@@ -52,4 +54,10 @@ public class CurrencyConverterDefinitionSteps {
     public void checkResultsForCurrencyList(final List<Currency> currencyList) throws Exception {
         currencyConverterSteps.user_checks_result_for_currency_list(currencyList);
     }
+
+    @Then("User verifies visibility $isVisible of '$listOfControlsName' controls on the page")
+    public void userVerifiesControlOnThePage(final List<Control> listOfControlsName, final boolean isVisible) {
+        currencyConverterSteps.user_verifies_visibility_of_controls_on_the_page(listOfControlsName, isVisible);
+    }
+
 }

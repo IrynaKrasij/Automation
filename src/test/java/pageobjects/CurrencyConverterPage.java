@@ -2,7 +2,6 @@ package pageobjects;
 
 import enums.Key;
 import net.serenitybdd.core.annotations.findby.FindBy;
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.support.ui.Select;
@@ -11,7 +10,7 @@ import utils.Session;
 
 @DefaultUrl("/converter/")
 
-public class CurrencyConverterPage extends PageObject {
+public class CurrencyConverterPage extends BasePage {
 
     @FindBy(xpath = "//li[@id='sell']/a")
     private WebElementFacade sellLink;
@@ -69,6 +68,22 @@ public class CurrencyConverterPage extends PageObject {
 
     @FindBy(xpath = "//div[@class='widget-currency_bank']//tr[./th[text()='RUB']]/td[2]/span/span[1]")
     private WebElementFacade rubSellingRateLabel;
+
+    @FindBy(xpath = "//div[./h2[contains(text(),'Средний курс валют в банках')]]")
+    private WebElementFacade averageCurrenciesRateInBank;
+
+    @FindBy(xpath = "//div[./h2[./a[contains(text(),'Наличный рынок')]]]")
+    private WebElementFacade cashMarket;
+
+    @FindBy(xpath = "//div[./h2[contains(text(),'График флуктуаций среднего курса')]]/div[./div[@id='graph_container']]")
+    private WebElementFacade graphOfFluctuationsOfMiddleRate;
+
+    @FindBy(xpath = "//div/h1[contains(text(), 'Курсы валют')]")
+    private WebElementFacade currencyRate;
+
+    public boolean isCurrencyRateVisible(){
+        return isElementVisible(true, currencyRate);
+    }
 
     public void clickSellLink() {
         sellLink.click();
@@ -149,4 +164,17 @@ public class CurrencyConverterPage extends PageObject {
         Select select = new Select(rateDropdown);
         select.selectByVisibleText(rateValue);
     }
+
+    public boolean isCashMarketVisible(final boolean isVisible){
+        return isElementVisible(isVisible, cashMarket);
+    }
+
+    public boolean isAverageCurrenciesRateInBankVisible(final boolean isVisible){
+        return isElementVisible(isVisible, averageCurrenciesRateInBank);
+    }
+
+    public boolean isGraphOfFluctuationsOfMiddleRateVisible(final boolean isVisible){
+        return isElementVisible(isVisible, graphOfFluctuationsOfMiddleRate);
+    }
+
 }
